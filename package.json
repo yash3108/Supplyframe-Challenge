@@ -1,0 +1,22 @@
+{
+  "name": "suppyframe-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server"
+  },
+  "author": "Yash Prashant Shah",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
