@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const errorHandler = require('./errors/errorHandler')
+const router = require('./routes/root')
 const PORT = process.env.PORT || 3500;
 
 //serve static files

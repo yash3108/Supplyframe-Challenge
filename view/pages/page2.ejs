@@ -12,17 +12,48 @@
   </header>
 
   <main>
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="jumbotron">
-          <h1>Page 2</h1>
-          <p>Welcome to Page 2</p>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="<%= image %>" alt="Recipe Image">
+          <div class="card mt-3">
+            <div class="card-body">
+              <h5 class="card-title">Ingredients</h5>
+              <ul id="ingredientsList">
+                <% ingredients.forEach(ingredient=> { %>
+                  <li>
+                    <%= ingredient %>
+                  </li>
+                  <% }); %>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="well">
-          <h3>This is Page 2 Sidebar!</h3>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Measurements</h5>
+              <ul id="measurementsList" class="list-group list-group-flush">
+                <% measurements.forEach(measurement=> { %>
+                  <li class="list-group-item">
+                    <%= measurement %>
+                  </li>
+                  <% }); %>
+              </ul>
+            </div>
+          </div>
+          <div class="card mt-3">
+            <div class="card-body">
+              <h5 class="card-title">Recipe</h5>
+              <ol id="recipeList">
+                <% recipe.forEach(step=> { %>
+                  <li>
+                    <%= step %>
+                  </li>
+                  <% }); %>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
     </div>

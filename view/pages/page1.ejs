@@ -13,18 +13,19 @@
 
   <main>
     <div class="row">
-      <div class="col-sm-8">
-        <div class="jumbotron">
-          <h1>Page 1</h1>
-          <p>Welcome to Page 1</p>
+      <% coffeeData.forEach(item=> { %>
+        <div class="col-md-4">
+          <a href="./page2?id=<%= encodeURIComponent(item.id) %>" class="coffee-card"
+            style="text-decoration: none; color: #333333">
+            <img src="<%= item.drinkThumb %>" class="card-img-top" alt="<%= item.drinkName %>">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= item.drinkName %>
+              </h5>
+            </div>
+          </a>
         </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="well">
-          <h3>This is Page 1 Sidebar!</h3>
-        </div>
-      </div>
+        <% }); %>
     </div>
   </main>
 
