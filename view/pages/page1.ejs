@@ -12,16 +12,16 @@
   </header>
 
   <main>
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
       <% coffeeData.forEach(item=> { %>
         <div class="col-md-4">
-          <a href="./page2?id=<%= encodeURIComponent(item.id) %>" class="coffee-card"
-            style="text-decoration: none; color: #333333">
+          <a href="./page2?id=<%= encodeURIComponent(item.id) %>&name=<%= encodeURIComponent(item.drinkName) %>" class="coffee-card"
+            style="text-decoration: none; color: #333333; border-radius: 2rem">
             <img src="<%= item.drinkThumb %>" class="card-img-top" alt="<%= item.drinkName %>">
-            <div class="card-body">
-              <h5 class="card-title">
+            <div class="card-body" style="background-color: azure;">
+              <h4 class="card-title" style="text-align: center;">
                 <%= item.drinkName %>
-              </h5>
+              </h4>
             </div>
           </a>
         </div>

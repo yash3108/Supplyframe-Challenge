@@ -10,6 +10,8 @@
   "author": "Yash Prashant Shah",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/akaya-kanadaka": "^5.0.12",
+    "@fontsource/allison": "^5.0.19",
     "date-fns": "^3.6.0",
     "ejs": "^3.1.9",
     "express": "^4.19.2",

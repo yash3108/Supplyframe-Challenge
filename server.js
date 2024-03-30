@@ -5,10 +5,10 @@ const errorHandler = require('./errors/errorHandler')
 const router = require('./routes/root')
 const PORT = process.env.PORT || 3500;
 
-//serve static files
-// app.use('/', express.static(path.join(__dirname, 'public')));
-
 app.set('view engine', 'ejs');
+
+//serve static files
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 //routes
 app.use('/', require('./routes/root'));

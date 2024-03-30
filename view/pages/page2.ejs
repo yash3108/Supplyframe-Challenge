@@ -12,13 +12,13 @@
   </header>
 
   <main>
-    <div class="card">
+    <div class="glass-card">
       <div class="row">
         <div class="col-md-4">
-          <img src="<%= image %>" alt="Recipe Image">
-          <div class="card mt-3">
+          <img src="<%= image %>" alt="Recipe Image" class="recipe-img">
+          <div class="bottom-left-card">
             <div class="card-body">
-              <h5 class="card-title">Ingredients</h5>
+              <h5 class="card-title"><b>Ingredients</b></h5>
               <ul id="ingredientsList">
                 <% ingredients.forEach(ingredient=> { %>
                   <li>
@@ -30,9 +30,14 @@
           </div>
         </div>
         <div class="col-md-8">
-          <div class="card">
+          <div class="top-right-card">
+            <h2 class="card-title" style="text-align: center; font-family: Akaya Kanadaka;">
+              <%= name %>
+            </h2>
+          </div>
+          <div class="top-right-card" style="font-family: Antic; font-weight: bold;">
             <div class="card-body">
-              <h5 class="card-title">Measurements</h5>
+              <h4 class="card-title"><b>Measurements</b></h4>
               <ul id="measurementsList" class="list-group list-group-flush">
                 <% measurements.forEach(measurement=> { %>
                   <li class="list-group-item">
@@ -42,9 +47,9 @@
               </ul>
             </div>
           </div>
-          <div class="card mt-3">
+          <div class="bottom-right-card">
             <div class="card-body">
-              <h5 class="card-title">Recipe</h5>
+              <h5 class="card-title"><b>Recipe</b></h5>
               <ol id="recipeList">
                 <% recipe.forEach(step=> { %>
                   <li>

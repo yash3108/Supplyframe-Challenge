@@ -3,17 +3,85 @@
 
 <!-- CSS (load bootstrap from a CDN) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Allison&family=Antic&display=swap" rel="stylesheet">
 <style>
+  .btn-outline-primary {
+        color: #6F4E37; /* Text color */
+        font-family: Allison;
+        border-color: #6F4E37; /* Border color */
+        border-radius: 1rem;
+    }
+
+    .btn-outline-primary:hover {
+        color: #fff; /* Text color on hover */
+        background-color: #6F4E37; /* Background color on hover */
+        border-color: #6F4E37; /* Border color on hover */
+        border-radius: 1rem;
+        font-family: Allison;
+    }
+
   body {
     padding-top: 10px;
+    background-image: url("/images/coffee_background2.jpg");
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
   }
 
   .coffee-card {
     margin-bottom: 20px; /* Add space between cards */
+    text-decoration: none;
+    color: #333333;
+    border-radius: 2rem;
   }
 
-  img {
+  .top-right-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic; 
+    font-weight: bold;
+  }
+
+  .bottom-left-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic; 
+    font-weight: bold;
+  }
+
+  .bottom-right-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic; 
+    font-weight: bold;
+  }
+
+  .glass-card {
+    margin-top: 10px;
+    background: white;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.2)
+    );
+    backdrop-filter: blur(1rem);
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  .img {
     max-width: 100%;
     height: auto;
+  }
+
+  .recipe-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    justify-content: center;
   }
 </style>

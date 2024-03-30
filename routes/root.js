@@ -17,7 +17,9 @@ router.route('^/page2(.html)?')
     .get(async (req, res) => {
         if (req.query.id) {
             let id = req.query.id;
+            let drinkName = req.query.name;
             const recipe = await getCoffeeRecipe(id);
+            recipe.name = drinkName;
             res.render(path.join(__dirname, '..', 'view', 'pages', 'page2'), recipe);
             return;
         }
