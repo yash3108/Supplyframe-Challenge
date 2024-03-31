@@ -1,35 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <%- include('../partials/head'); %>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column vh-100">
 
   <header>
     <%- include('../partials/header'); %>
   </header>
 
-  <main>
+  <main class="flex-grow-1">
     <div class="row" style="margin-top: 10px;">
+
+      <!--Loop into coffee menu-->
       <% coffeeData.forEach(item=> { %>
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-bottom: 10px;">
+
+          <!--Card to redirect to recipe page-->
           <a href="./page2?id=<%= encodeURIComponent(item.id) %>&name=<%= encodeURIComponent(item.drinkName) %>" class="coffee-card"
-            style="text-decoration: none; color: #333333; border-radius: 2rem">
+            style="text-decoration: none; color: #333333; border-radius: 2rem; height: auto;">
+
+            <!--Drink Image-->
             <img src="<%= item.drinkThumb %>" class="card-img-top" alt="<%= item.drinkName %>">
+
             <div class="card-body" style="background-color: azure;">
+
+              <!--Drink Name-->
               <h4 class="card-title" style="text-align: center;">
                 <%= item.drinkName %>
               </h4>
+              
             </div>
           </a>
         </div>
         <% }); %>
+
     </div>
   </main>
 
-  <footer>
+  <footer class="footer">
     <%- include('../partials/footer'); %>
   </footer>
 

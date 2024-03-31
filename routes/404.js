@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
+//routing unavailable pages
 router.route('*')
     .all((req, res) => {
         res.status(404);

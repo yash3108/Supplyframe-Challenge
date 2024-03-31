@@ -1,14 +1,121 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Home page button */
+.btn-outline-primary {
+    /* Text color */
+    color: #6F4E37;
+
+    font-family: Allison;
+    border-color: #6F4E37;
+    border-radius: 1rem;
+}
+
+/* Home page button on hover */
+.btn-outline-primary:hover {
+    /* Text color on hover */
+    color: #fff;
+
+    background-color: #6F4E37;
+    border-color: #6F4E37;
+    border-radius: 1rem;
+    font-family: Allison;
 }
 
 body {
-    font-size: 36px;
-    min-height: 100vh;
-    color: #fff;
-    background-color: #000;
-    display: grid;
-    place-content: center;
+    height: 100vh;
+    padding-top: 10px;
+    background-image: url("../images/coffee_background2.jpg");
+    /* Prevent background image from repeating */
+    background-repeat: no-repeat;
+    /* Cover the entire background */
+    background-size: cover;
+    /* Center the background image */
+    background-position: center;
+    /* Fixind the position of background image */
+    background-attachment: fixed;
+}
+
+/* Card for image in coffe menu */
+.card-img-top {
+    border: 2px solid white;
+}
+
+/* Card for coffee menu items */
+.coffee-card {
+    text-decoration: none;
+    color: #333333;
+    border-radius: 2rem;
+    z-index: 0;
+}
+
+/* Drink Name and Measurements card in recipe page */
+.top-right-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic;
+    font-weight: bold;
+}
+
+/* Ingredients card in recipe page */
+.bottom-left-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic;
+    font-weight: bold;
+}
+
+/* Recipe card in recipe page */
+.bottom-right-card {
+    margin-top: 20px;
+    background: white;
+    border-radius: 2rem;
+    font-family: Antic;
+    font-weight: bold;
+}
+
+/* Background card for recipe */
+.glass-card {
+    margin-top: 10px;
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.2));
+    /* Add blur effect to the card */
+    backdrop-filter: blur(1rem);
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/* Images */
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Drink image in recipe page */
+.recipe-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    justify-content: center;
+}
+
+/* Page footer */
+.footer {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 25px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.666);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0));
+    /* Add blur effect to the card */
+    backdrop-filter: blur(0.5rem);
+    display: flex;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+    justify-content: center;
 }

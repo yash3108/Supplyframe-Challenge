@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <%- include('../partials/head'); %>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column vh-100">
 
   <header>
     <%- include('../partials/header'); %>
   </header>
 
-  <main>
+  <main class="flex-grow-1">
     <div class="glass-card">
       <div class="row">
         <div class="col-md-4">
+
+          <!--Drink Image-->
           <img src="<%= image %>" alt="Recipe Image" class="recipe-img">
+
+          <!--Ingredients Card-->
           <div class="bottom-left-card">
             <div class="card-body">
               <h4 class="card-title"><b>Ingredients</b></h4>
@@ -28,13 +29,18 @@
               </ul>
             </div>
           </div>
+
         </div>
         <div class="col-md-8">
+
+          <!--Drink Name Card-->
           <div class="top-right-card">
             <h2 class="card-title" style="text-align: center; font-family: Akaya Kanadaka;">
               <%= name %>
             </h2>
           </div>
+
+          <!--Measurements Card-->
           <div class="top-right-card" style="font-family: Antic; font-weight: bold;">
             <div class="card-body">
               <h4 class="card-title"><b>Measurements</b></h4>
@@ -47,6 +53,8 @@
               </ul>
             </div>
           </div>
+
+          <!--Recipe Card-->
           <div class="bottom-right-card">
             <div class="card-body">
               <h4 class="card-title"><b>Recipe</b></h4>
@@ -59,12 +67,13 @@
               </ol>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </main>
 
-  <footer>
+  <footer class="footer container-fluid">
     <%- include('../partials/footer'); %>
   </footer>
 

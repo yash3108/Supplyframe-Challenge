@@ -1,30 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <%- include('../partials/head'); %>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        // console.log('Service worker registered:', registration);
-                    })
-                    .catch(error => {
-                        // console.error('Service worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
+        <script>
+            /* service-worker for caching*/
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(registration => {
+                            /* Below commented code used to check the implementation of caching service worker */
+                            // console.log('Service worker registered:', registration);
+                        })
+                        .catch(error => {
+                            /* Below commented code used to check the implementation of caching service worker */
+                            // console.error('Service worker registration failed:', error);
+                        });
+                });
+            }
+        </script>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column vh-100">
 
     <header>
         <%- include('../partials/header'); %>
     </header>
 
-    <main>
+    <main class="flex-grow-1">
+
+        <!--Home Page card-->
         <div class="jumbotron text-center" style="border-radius: 2rem; margin-top: 10px;">
             <h1 style="font-family: Akaya Kanadaka;">Welcome to Coffee House</h1>
             <div class="row justify-content-center">
@@ -40,7 +42,8 @@
         </div>
     </main>
 
-    <footer>
+    <!--Page Footer-->
+    <footer class="footer">
         <%- include('../partials/footer'); %>
     </footer>
 
