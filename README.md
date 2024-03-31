@@ -34,3 +34,13 @@ The folder structure of this app is explained below:
 | server.js                | Entry point to express app |                    
 | response.test.js         | Contains Jest test case  |                                                       
 | package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)   |
+
+# Snapshots
+## Home Page
+![image](https://github.com/yash3108/Supplyframe-Challenge/assets/55008416/061dfecb-a908-4918-a47c-9ee91beef63d)
+
+## Menu (page1)
+![image](https://github.com/yash3108/Supplyframe-Challenge/assets/55008416/3e75f002-a11b-40d8-9e51-10d2f1e4a568)
+
+## Recipe (page2)
+![image](https://github.com/yash3108/Supplyframe-Challenge/assets/55008416/f3069e82-3654-4fab-8f28-b475c53f139c)
