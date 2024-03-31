@@ -20,6 +20,12 @@ npm start
 ```
   Navigate to `http://localhost:3500`
 
+## For Testing
+- Execute Jest test case
+```
+npm test
+``` 
+
 ## Project Structure
 The folder structure of this app is explained below:
 
