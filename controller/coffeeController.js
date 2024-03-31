@@ -3,7 +3,7 @@ const data = {
     setCoffee: function (data) { this.coffee = data }
 }
 
-const getAllCoffee = (req, res) => {
+const getAllCoffee = () => {
     // getCoffeeRecipe(12770);
     return (data);
 }
@@ -13,6 +13,7 @@ const getCoffeeRecipe = async (drinkId) => {
     const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + drinkId);
     const data = await response.json();
     const payload = {
+        id: parseInt(data.drinks[0].idDrink),
         image: data.drinks[0].strDrinkThumb,
         ingredients: getIngredients(data.drinks[0]),
         measurements: getMeasurements(data.drinks[0]),

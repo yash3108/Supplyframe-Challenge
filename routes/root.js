@@ -4,12 +4,14 @@ const path = require('path');
 const { getAllCoffee, getCoffeeRecipe } = require('../controller/coffeeController')
 
 router.get('^/$|/home(.html)?', (req, res) => {
+    res.status(200);
     res.render(path.join(__dirname, '..', 'view', 'pages', 'home'));
 });
 
 router.route('^/page1(.html)?')
     .get((req, res) => {
         const cData = getAllCoffee(req, res).coffee
+        res.status(200);
         res.render(path.join(__dirname, '..', 'view', 'pages', 'page1'), { coffeeData: cData });
     });
 
@@ -23,6 +25,7 @@ router.route('^/page2(.html)?')
             res.render(path.join(__dirname, '..', 'view', 'pages', 'page2'), recipe);
             return;
         }
+        res.status(200);
         res.render(path.join(__dirname, '..', 'view', 'pages', '404'));
     });
 

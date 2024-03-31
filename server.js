@@ -11,16 +11,15 @@ app.set('view engine', 'ejs');
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 //routes
-app.use('/', require('./routes/root'));
+app.use('/', router);
 
 //404
 app.use('*', (req, res) => {
     res.status(404);
     if (req.accepts('html')) {
-        // res.sendFile(path.join(__dirname, 'view', '404.html'));
         res.render(path.join(__dirname, 'view', 'pages', '404'))
     } else {
-        res.type('txt').send("404 File not found");
+        res.type('txt').send("404 Page Not Found");
     }
 })
 

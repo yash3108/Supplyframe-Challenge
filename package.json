@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server",
-    "start": "node server"
+    "start": "node server",
+    "test": "jest"
   },
   "author": "Yash Prashant Shah",
   "license": "ISC",
@@ -16,9 +17,11 @@
     "ejs": "^3.1.9",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
+    "supertest": "^6.3.4",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^2.0.12"
   }
 }
