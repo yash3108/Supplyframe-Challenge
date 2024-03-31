@@ -3,6 +3,11 @@ const router = express.Router();
 const path = require('path');
 const { getAllCoffee, getCoffeeRecipe } = require('../controller/coffeeController')
 
+router.route('/service-worker.js')
+    .get((req, res) => {
+        res.sendFile(path.join(__dirname, 'public', 'service-worker.js'));
+    });
+
 router.get('^/$|/home(.html)?', (req, res) => {
     res.status(200);
     res.render(path.join(__dirname, '..', 'view', 'pages', 'home'));
